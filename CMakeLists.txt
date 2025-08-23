@@ -78,3 +78,30 @@ add_exe_with_output_dir(practice_84 Chapter_8/practice_4.cpp)
 add_exe_with_output_dir(practice_85 Chapter_8/practice_5.cpp)
 add_exe_with_output_dir(practice_86 Chapter_8/practice_6.cpp)
 add_exe_with_output_dir(practice_87 Chapter_8/practice_7.cpp)
+# 创建 golf 静态库
+add_library(golf_lib STATIC Chapter_9/practice_1/golf.cpp)
+get_filename_component(golf_lib_dir Chapter_9/practice_1/golf.cpp DIRECTORY)
+set_target_properties(golf_lib PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${golf_lib_dir})
+
+# 修改 practice_91 的定义，链接 golf_lib
+add_executable(practice_91 Chapter_9/practice_1/practice_1.cpp)
+target_link_libraries(practice_91 PRIVATE golf_lib)
+get_filename_component(output_dir Chapter_9/practice_1/practice_1.cpp DIRECTORY)
+set_target_properties(practice_91 PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${output_dir})
+
+add_exe_with_output_dir(practice_92 Chapter_9/practice_2.cpp)
+add_exe_with_output_dir(practice_93 Chapter_9/practice_3.cpp)
+# 创建 静态库
+add_library(sale_lib STATIC Chapter_9/practice_4/sale.cpp)
+get_filename_component(sale_lib_dir Chapter_9/practice_4/sale.cpp DIRECTORY)
+set_target_properties(sale_lib PROPERTIES
+        ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${sale_lib_dir})
+
+# 修改 practice_94 的定义，链接
+add_executable(practice_94 Chapter_9/practice_4/practice_4.cpp)
+target_link_libraries(practice_94 PRIVATE sale_lib)
+get_filename_component(output_dir Chapter_9/practice_4/practice_4.cpp DIRECTORY)
+set_target_properties(practice_94 PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${output_dir})
