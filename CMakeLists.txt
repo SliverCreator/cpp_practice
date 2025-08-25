@@ -105,3 +105,20 @@ target_link_libraries(practice_94 PRIVATE sale_lib)
 get_filename_component(output_dir Chapter_9/practice_4/practice_4.cpp DIRECTORY)
 set_target_properties(practice_94 PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${output_dir})
+
+# 编译 Chapter_10/practice_1
+add_subdirectory(Chapter_10/practice_1)
+# 编译 Chapter_10/practice_2
+add_subdirectory(Chapter_10/practice_2)
+# 编译 Chapter_10/practice_4
+add_subdirectory(Chapter_10/practice_4)
+# 编译 Chapter_10/practice_3
+add_subdirectory(Chapter_10/practice_3)
+# 编译 Chapter_10/practice_5
+add_subdirectory(Chapter_10/practice_5)
+# 编译 Chapter_10/practice_6
+add_subdirectory(Chapter_10/practice_6)
+# 编译 Chapter_10/practice_7
+add_subdirectory(Chapter_10/practice_7)
+# 编译 Chapter_10/practice_8
+add_subdirectory(Chapter_10/practice_8)
