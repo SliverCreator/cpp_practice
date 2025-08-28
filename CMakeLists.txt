@@ -134,3 +134,5 @@ add_subdirectory(Chapter_11/practice_4)
 add_subdirectory(Chapter_11/practice_6)
 # 编译 Chapter_11/practice_5
 add_subdirectory(Chapter_11/practice_5)
+# 编译 Chapter_11/practice_7
+add_subdirectory(Chapter_11/practice_7)
